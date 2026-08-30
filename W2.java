@@ -1,5 +1,5 @@
 
-// MCQ questions
+// MCQ questions.
 
 // How to form a class
 // Unit tests via JUnit
@@ -183,3 +183,61 @@ public MountainBike(int topSpeed,
 //  Variables or parameters: constant.
 //  Methods: no overriding.
 //  Classes: no inheritance.
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// Challenges.
+
+// How to get length of something, including string or array
+// Method calls, basic stuff (at heart quite easy)
+// Common methods of String.java
+// Interfaces - creating, using
+// Abstract classes (less interesting for the test)
+
+
+// How to get length of something, including string or array
+int[] arr = new int[4];
+arr.length;
+
+String a = "example";
+a.length();
+
+
+// Common methods of String.java
+//  Note that CharSequence is an interface that is implemented by String (i.e. CharSequence parameters take Strings).
+length()
+charAt(int index)
+equals(Object another)
+equalsIgnoreCase(String another)
+substring(int beginIndex, int endIndex)
+contains(CharSequence s)
+indexOf(String str)
+toLowerCase()
+toUpperCase()
+trim()
+strip()
+replace(CharSequence target, CharSequence replacement)
+split(String regex)
+startsWith(String prefix)
+endsWith(String suffix)
+isEmpty()
+isBlank()
+valueOf(Object obj)  //  Converts to string.
+
+
+// Interfaces - creating, using
+
+public interface SampleInterface {
+
+   int sampleMethod(int x);
+
+}
+
+public class SampleClass implements SampleInterface {
+
+    int sampleMethod(int x) {...};
+    
+}
