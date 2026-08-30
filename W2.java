@@ -202,9 +202,6 @@ public MountainBike(int topSpeed,
 int[] arr = new int[4];
 arr.length;
 
-String a = "example";
-a.length();
-
 
 // Common methods of String.java
 //  Note that CharSequence is an interface that is implemented by String (i.e. CharSequence parameters take Strings).
@@ -212,19 +209,18 @@ length()
 charAt(int index)
 equals(Object another)
 equalsIgnoreCase(String another)
-substring(int beginIndex, int endIndex)
-contains(CharSequence s)
-indexOf(String str)
+substring(int beginIndex)  //  Akin to str[b:].
+substring(int beginIndex, int endIndex)  //  Akin to str[b:e] - exclusive of position endIndex.
+contains(CharSequence s)  //  true/false.
+indexOf(String str)  //  First occurence.
 toLowerCase()
 toUpperCase()
-trim()
-strip()
+trim()  //  Leading and trailing whitespace removed.
 replace(CharSequence target, CharSequence replacement)
 split(String regex)
-startsWith(String prefix)
-endsWith(String suffix)
-isEmpty()
-isBlank()
+startsWith(String prefix)  //  true/false.
+endsWith(String suffix)  //  true/false.
+isEmpty() //  true if 0 length.
 valueOf(Object obj)  //  Converts to string.
 
 
