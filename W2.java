@@ -1,4 +1,6 @@
-// MCQ
+
+// MCQ questions
+
 // How to form a class
 // Unit tests via JUnit
 // Assertions
