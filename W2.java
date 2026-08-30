@@ -20,7 +20,7 @@
 // Parameterised tests - value source, csvsource
 // 4 pillars of object-oriented programming - how to define polymorphism
 // Arithmetic operators: +-*/ modulus
-// Abstract methods - final
+// Abstract methods, final
 
 
 // How to form a class
@@ -41,14 +41,15 @@ public class SampleClass {
 
 // Unit tests via JUnit
 // Assertions
+// Parameterised tests - value source, csvsource
 
 public class PersonTest {
 
-    @ParameterizedTest
-    @DisplayName("Test")
-    public void test_1(String str)
+    @Test
+    @DisplayName("Basic test")
+    public void test_1()
     {
-        Assertions.assertEquals("blah", str);
+        Assertions.assertEquals("blah", Methods.genOutput());
     }
 
     @ParameterizedTest
@@ -152,4 +153,33 @@ public MountainBike(int topSpeed,
 }   
 
 
-// Memory model - if a reference type value is deleted, 
+// Memory model - if a reference type value is deleted.
+// String Pool.
+
+//  Reference types (objects) are stored on the heap.
+//  Primitives are stored on the stack.
+//  Strings are stored in the String Pool (may be reference also on heap).
+//  Using 'new' may cause the same string to be stored twice within the String Pool.
+//  When objects are no longer used, they can be deleted from the heap.
+//  Every edit to a string may create a new string on the String Pool, as string objects are immutable.
+//  '==' may compare different Strings within string pool, despite same text.
+//  StringBuilder is mutable; less objects created.
+//  Garbage collector removes elements from heap, then compresses heap.
+//  https://www.baeldung.com/java-string-constant-pool-heap-stack
+
+
+// 4 pillars of object-oriented programming - how to define polymorphism
+
+//  Abstraction - consistent interface when interacting with object/class from outside.
+//  Encapsulation - underlying methods and variables are hidden from user, allowing them to be changed, and controlling access.
+//  Inheritence - classes can inherit methods and variables from 1 superclass.
+//  Polymorphism - overloading (compile-time), or overriding (dynamic).
+//  https://www.baeldung.com/java-oop
+
+
+// Abstract methods, final
+
+//  Final keyword has different meaning depending upon context, the theme being no further changes permitted.
+//  Variables or parameters: constant.
+//  Methods: no overriding.
+//  Classes: no inheritance.
