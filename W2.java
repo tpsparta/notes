@@ -237,3 +237,8 @@ public class SampleClass implements SampleInterface {
     int sampleMethod(int x) {...};
     
 }
+
+
+//  Main method
+
+public static void main(String[] args) { }
